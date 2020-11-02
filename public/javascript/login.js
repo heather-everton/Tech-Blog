@@ -14,8 +14,10 @@ function signupFormHandler(event) {
           password
         }),
         headers: { 'Content-Type': 'application/json' }
-      }).then((response) => {console.log(response)})
+      }).then(() => {document.location.replace('/dashboard')})
+      .catch(err => console.log(err))
     }
+
   }
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
   
